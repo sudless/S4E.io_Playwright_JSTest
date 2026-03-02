@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SignUpPage } from '../../pages/signUp.page';
+import { SignUpPage } from '../pages/signUp.page';
 import { createValidUser, invalidEmails } from '../../testData/signUp.data';
 import {
     generateShortPassword,
