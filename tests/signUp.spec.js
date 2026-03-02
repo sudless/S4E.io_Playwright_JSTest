@@ -101,7 +101,7 @@ test.describe('Sign Up Tests', (role, options) => {
             const user = createValidUser();
             user.email = invalidEmail;
 
-            await page.goto('https://app.s4e.io/sign-up'); // reset state
+            await page.goto('https://app.s4e.io/sign-up'); 
 
             await signUpPage.fillFormMandatory(user);
             await signUpPage.termsCheckbox.check();
@@ -268,7 +268,6 @@ test.describe('Sign Up Tests', (role, options) => {
 
         await signUpPage.submit();
 
-        // Ensure script did not execute and not rendered as HTML
         await expect(page.locator('text=<script>')).not.toBeVisible();
     });
     test('Signup page should enforce HTTPS', async ({ page }) => {
