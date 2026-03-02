@@ -5,7 +5,7 @@ import {
     generateShortPassword,
     generateNoUppercasePassword,
     generateNoLowercasePassword
-} from '../../utilities/validationHelpers';
+} from '../utilities/validationHelpers';
 
 test.describe('Sign Up Tests', (role, options) => {
 
