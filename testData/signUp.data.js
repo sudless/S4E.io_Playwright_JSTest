@@ -1,24 +1,22 @@
-export const validUser = {
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe+test123@example.com',
-    password: 'StrongPass123!'
-};
+import { generateUniqueEmail, generateUniquePhoneNumber} from '../utilities/validationHelpers';
+
+
+export function createValidUser() {
+    return {
+        email: generateUniqueEmail(),
+        password: 'StrongPass123!',
+        phoneNumber: generateUniquePhoneNumber()
+    };
+}
 
 export const invalidEmails = [
-    'plainaddress',
-    'missingatsign.com',
-    'user@.com',
-    'user@com',
-    'user@domain.'
+    'invalidPlain',
+    'missingAt.com',
+    'test@.com',
+    'test@com',
+    'test@domain.'
 ];
 
-export const weakPasswords = [
-    '123',
-    'password',
-    'abcdef',
-    'AAAAAA'
-];
 
 export const mismatchedPasswords = {
     password: 'StrongPass123!',
